@@ -5,7 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ExamTickets"
         mc:Ignorable="d"
-        Title="MainWindow" MinHeight="450" MinWidth="800" MaxHeight="450" MaxWidth="800">
+        Title="Генератор билетов"  MinHeight="450" MinWidth="800" MaxHeight="450" MaxWidth="800">
+    <Window.Resources>
+        <x:Array x:Key="backgrounds" Type="Brush">
+            <SolidColorBrush Color="#DAF7A6" />
+            <SolidColorBrush Color="#C6E8E1" />
+            <SolidColorBrush Color="#E8C6E5" />
+            <SolidColorBrush Color="#F0E269" />
+            <SolidColorBrush Color="#F8DBB2" />
+        </x:Array>
+    </Window.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -14,7 +24,7 @@
 
         <Frame x:Name="mainFrame" Grid.Row="1" NavigationUIVisibility="Hidden"/>
 
-        <Menu  FontSize="16" VerticalAlignment="Top" Background="White">
+        <Menu FontSize="16" VerticalAlignment="Top" Background="White">
             <MenuItem x:Name="questionsButton" Header="Вопросы" Click="QuestionsButtonClick"/>
             <Separator/>
             <MenuItem x:Name="ticketsButton" Header="Билеты" Click="TicketsButtonClick"/>

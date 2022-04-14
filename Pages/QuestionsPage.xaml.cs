@@ -11,16 +11,18 @@ namespace ExamTickets.Pages
 {
     public partial class QuestionsPage : Page
     {
-        public QuestionsPage()
+        List<string> paragraphs;
+
+        public QuestionsPage(List<string> paragraph)
         {
             InitializeComponent();
+            paragraphs = paragraph;
         }
 
         private void AddFileButtonClick(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Text files (*.docx)|*.docx";
-
 
             if (openFileDialog.ShowDialog() == true)
             {
@@ -29,7 +31,7 @@ namespace ExamTickets.Pages
 
                 var directory = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
                 var file = Path.Combine(directory, "ExamTicket.txt");
-                List<string> paragraphs = new List<string>();
+               
 
                 foreach (var childElement in body.ChildElements)
                 {
