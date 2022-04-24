@@ -118,8 +118,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Resource\Sample.docx" />
-    <None Include="Resource\Sample.dotx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

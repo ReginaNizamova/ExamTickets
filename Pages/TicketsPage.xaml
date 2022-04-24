@@ -9,32 +9,23 @@
       Title="TicketsPage">
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="1.5*"/>
-        </Grid.ColumnDefinitions>
-
-        <StackPanel VerticalAlignment="Center">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <StackPanel Orientation="Horizontal">
                 <StackPanel Width="120" Margin="15 30 0 0" HorizontalAlignment="Left">
                     <Label Content="Предмет" FontSize="14" />
                     <Label Content="Семестр" FontSize="14"/>
                     <Label Content="Кол-во билетов" Margin="0 25 0 0" FontSize="14"  />
-                    <Label Content="Кол-во вопросов"  FontSize="14"/>
+                    <Label Content="Путь к файлу"  FontSize="14"/>
                 </StackPanel>
 
                 <StackPanel  Width="180" Margin="20 35 0 0"  HorizontalAlignment="Right">
                     <TextBox x:Name="titleSubject" FontSize="14" Margin="0 0 20 10"  Height="20"/>
                     <TextBox x:Name="semester" FontSize="14" Margin="0 0 20 15" Width="50" HorizontalAlignment="Left" Height="20"/>
                     <TextBox x:Name="countTickets" FontSize="14" Margin="0 20 0 8" Width="50" HorizontalAlignment="Left" Height="20"/>
-                    <TextBox x:Name="countQuestions" Height="20" Width="50" HorizontalAlignment="Left" FontSize="14"/>
+                    <TextBox x:Name="pathFile" FontSize="14" Margin="0 0 20 10"  Height="20"/>
                 </StackPanel>
             </StackPanel>
             <Button x:Name="generateButton" Content="Сгенерировать" Width="150" Height="30" Background="White" Margin="0 50 0 0" BorderBrush="Gray" BorderThickness="0.5" Click="GenerateButtonClick" />
         </StackPanel>
-
-        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="1"  >
-            <TextBlock x:Name="textQuestions"  Margin="20" TextWrapping="Wrap"/>
-        </ScrollViewer>
     </Grid>
 </Page>
